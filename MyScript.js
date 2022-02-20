@@ -3,7 +3,7 @@
  */
 
 
-/**
+/**s
  *Age user
  * @type {string}
  */
@@ -30,9 +30,9 @@ alert( isBoss );
  * @param y
  * @returns {string}
  */
-let yo = (y) => /\d*1\d$/.test(y) || /[05-9]$/.test(y) ? 'лет' : ( /1$/.test(y) ? 'год' : 'года');
-let years = parseInt(prompt('Сколько Вам лет?'));
-alert(`Вам ${years} ${yo(years)}`);
+
+let years = prompt('Сколько Вам лет?');
+alert(`Вам ${years} `);
 
 /**
  * Площадь квадрата
