@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate</title>
+</head>
+<body>
+<form name="myLogin">
+    <div><label> Login <input type="text" name="Login"></label></div>
+    <div><label> Password <input type="password" name="password"></label></div>
+    <div><label> Conform Password <input type="password" name="password_conform"></label></div>
+    <div><input type="submit" value="submit"></div>
+</form>
+<script>
+
+    let log_arr = document.getElementsByName('Login')
+    let inP_arr = document.getElementsByName('password')
+    let inPC_arr = document.getElementsByName('password_conform')
+
+    function myValidate() {
+
+        let p = inP_arr[0].value
+        let pc = inPC_arr[0].value
+
+        log_arr = /.*[A-Z].*/
+        if(log_arr.test(p)){
+            log_arr.style.border = 'blue'
+        } else{
+
+            log_arr.style.border  = 'yellow'
+        }console.log(log_arr)
+        // Мы сравниваем элементы, а не их значения
+        // inP_arr[0] === inPC_arr[0]
+
+        if(p === pc) {
+            // true
+            checkPassword.style.color = 'green'
+        } else {
+            // false
+            checkPassword.style.color = 'blue'
+        }
+
+        // Регулярное выражение на наличие цифры
+        let isNum = /\d{1,}/
+        if(isNum.test(p)) {
+            nums.style.color = 'green'
+        } else {
+            nums.style.color = 'red'
+        }
+
+        // Большие
+        let isUpper = /.*[A-Z].*/
+        if(isUpper.test(p)) {
+            upperCase.style.color = 'green'
+        } else {
+            upperCase.style.color = 'red'
+        }
+
+        // Большие
+        let isLower = /.*[a-z].*/
+        if(isUpper.test(p)) {
+            lowerCase.style.color = 'green'
+        } else {
+            lowerCase.style.color = 'red'
+        }
+
+        if(p.length >= 8) {
+            minL.style.color = 'green'
+        } else {
+            minL.style.color = 'red'
+        }
+
+    }
+
+    myValidate()
+
+    inP_arr[0].onchange = myValidate
+    inPC_arr[0].onchange = myValidate
+    log_arr[0].onchange = myValidate
+
+
+
+
+</script>
+</body>
+</html>

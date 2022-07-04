@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #btnAdd{
+            border: 2px solid grey;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <ul id="lstContacts"></ul>
+    <p>Phones book</p>
+    <div>
+        <label for="inName"> Name <input type="text" name="name" id="inName"></label>
+    </div>
+    <div>
+        <label for="inPhone">Phone <input type="text" name="phone" id="inPhone"></label>
+    </div>
+    <div>
+        <input type="button" id="btnaddUser" value="+">
+    </div>
+
+
+</main>
+
+<script>
+    let contacts = []
+    let lstContacts = document.getElementById("lstContacts")
+
+
+
+    function renderlstContacts(){
+        lstContacts.innerHTML = ''
+        for ( let i = 0; i < contacts.length; i++)
+            let li = document.createElement("li")
+        function renderContacts() {
+            lstContacts.innerHTML = ''
+            for( let i = 0; i < contacts.length; i++){
+                let li = document.createElement("li")
+
+                let spanName = document.createElement("span")
+                spanName.innerText = contacts[i].name // По ключу (по полю)
+                spanName.className = 'contactName'
+
+                let spanPhone = document.createElement("span")
+                spanPhone.innerText = contacts[i].phone // По ключу (по полю)
+                spanPhone.className = 'contactPhone'
+
+                li.appendChild(inName)
+                li.appendChild(inPhone)
+
+                lstContacts.appendChild(li)
+            }
+        }
+        renderlstContacts()
+
+        document.getElementById('btnAddUser').onclick = function () {
+            contacts.push(
+                {
+                    name: document.getElementById('inName').value,
+                    phone: document.getElementById('inPhone').value
+                })
+            renderlstContacts()
+        }
+
+</script>
+</body>
+</html>

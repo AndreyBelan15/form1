@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flat</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    /**
+     * Моя квартира
+     */
+
+    let myFlat = {}
+
+    myFlat.rooms = []
+
+    /**
+     * Кухня
+     * @type {string}
+     */
+        myFlat.rooms [0] = {name:'kitchen'}
+
+    let table = {}
+        table.description = {material: 'wood', height: 80, width: 60}
+
+    let plita = {}
+        plita.vendor = {name: 'Ardo', vin: 3992094, site: 'https://www.techcenter.com.ua/makers/ARDO'}
+    let k1 = {size: 2}
+    let k2 = {size: 4}
+    let k3 = {size: 5}
+    let k4 = {size: 9}
+
+        plita.komforki = [k1,k2,k3,k4]
+
+    myFlat.rooms[0].table = table
+    myFlat.rooms[0].plita = plita
+
+    /**
+     * Зал
+     * @type {string}
+     */
+        myFlat.rooms [1] = {name:'hall'}
+
+    let telek = {name: 'Xiaomi', size: 55}
+    let sofa = {vendor: 'Noyname', length: 230} //тут не хочет объявлять 'sofa'
+
+    let music = {}
+        music.vendor = {name: 'Samsung'}
+    let s1 = {size: 20}
+    let s2 = {size: 30}
+    let s3 = {size: 30}
+    let s4 = {size: 90}
+
+        music.speakers = [s1, s2, s3, s4]
+
+    myFlat.rooms [1].sofa = sofa
+    myFlat.rooms [1].telek = telek
+    myFlat.rooms [1].music = music
+    /**
+     * Ванная комната
+     * @type {string}
+     */
+        myFlat.rooms [2] = {name:'bathroom'}
+
+    let mirror = {form: 'oval', description: 'old'}
+    let bath = {}
+     bath.description = {width: 90, length: 200, deepness: 80}
+    let col = {color: 'white'}
+    let mat = {material: 'cast iron'}
+
+        bath.user = [col, mat]
+
+    myFlat.rooms[2].mirror = mirror
+    myFlat.rooms[2].bath = bath
+    /**
+     * Спальня
+     * @type {string}
+     */
+        myFlat.rooms [3] = {name:'bedroom'}
+
+    let shkaf = {}
+        shkaf.description = {material: 'wood', height: 230, width: 250}
+
+    let pol1 = {polka1: 'майки'}
+    let pol2 = {polka2: 'трусишки'}
+    let pol3 = {polka3: 'носочки'}
+    let pol4 = {polka4: 'капочки'}
+    let pol5 = {polka5: 'штанишки'}
+
+        shkaf.description = [pol1, pol2, pol3, pol4, pol5]
+
+    myFlat.rooms[3].shkaf = shkaf
+
+
+     console. log (myFlat)
+
+
+</script>
+</html>
