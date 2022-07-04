@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Заголовок</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+<main>
+
+    <input type="number" id="inSum" class="inp" value="">
+    <input type="button" id="goEx"><br>
+    <input type="number" id="outSum" class="inp" value="">
+
+
+</main>
+
+
+
+
+<script>
+
+    // Реализуйте конвертор валют. Пользователь вводит доллары, программа переводит в евро. Курс валюты храните в
+    // константе
+
+
+    document.getElementById("inSum").onchange = function () {
+       let sum = document.getElementById("inSum").value
+        let a = 32
+       let course = 28
+       let result = a / course * 100
+       document.getElementById("outSum").value = result
+
+
+    }
+
+</script>
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="libs/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
